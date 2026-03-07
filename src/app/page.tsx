@@ -14,8 +14,8 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         {/* Background layers */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-charcoal-50/30 dark:from-charcoal-900/60 dark:via-charcoal-900/40 dark:to-charcoal-800/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(249,115,22,0.08),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(200,255,0,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(2,25,69,0.08),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(231,178,33,0.05),transparent_50%)]" />
 
         <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6 sm:pt-32">
           <div className="text-center">
@@ -106,7 +106,7 @@ export default function HomePage() {
                   <StaggerItem key={i} effect={i % 2 === 0 ? "slide-right" : "slide-left"}>
                     <Link
                       href={item.link}
-                      className="flex items-center gap-3 rounded-lg border border-charcoal-200/60 bg-white/40 px-4 py-3 text-sm text-charcoal-500 backdrop-blur-sm transition-all hover:border-fire-500/50 hover:bg-white/70 hover:text-charcoal-900 dark:border-charcoal-700/50 dark:bg-charcoal-800/40 dark:text-charcoal-300 dark:hover:bg-charcoal-800/70 dark:hover:text-white"
+                      className="flex items-center gap-3 rounded-lg border border-charcoal-200/60 bg-white/40 px-4 py-3 text-sm text-charcoal-500 backdrop-blur-sm transition-all hover:border-fire-500/50 hover:bg-white/70 hover:text-charcoal-900 dark:border-charcoal-500/40 dark:bg-charcoal-700/60 dark:text-charcoal-300 dark:hover:bg-charcoal-800/70 dark:hover:text-white"
                     >
                       <ItemIcon className="h-4 w-4 shrink-0 text-fire-500 dark:text-fire-400" />
                       <span>{item.problem}</span>
@@ -120,13 +120,13 @@ export default function HomePage() {
       </section>
 
       {/* Categories */}
-      <section id="categories" className="relative bg-charcoal-50/50 py-20 dark:bg-charcoal-800/20">
+      <section id="categories" className="relative bg-charcoal-50/50 py-20 dark:bg-charcoal-800/40">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <ScrollReveal effect="blur" className="mb-12 text-center">
             <h2 className="font-heading text-3xl font-bold text-charcoal-900 dark:text-white sm:text-4xl">
               Browse by Category
             </h2>
-            <p className="mt-3 text-charcoal-400">
+            <p className="mt-3 text-charcoal-400 dark:text-charcoal-200">
               {articles.length} articles organized into {categories.length} categories
             </p>
           </ScrollReveal>
@@ -146,7 +146,7 @@ export default function HomePage() {
             <h2 className="font-heading text-3xl font-bold text-charcoal-900 dark:text-white sm:text-4xl">
               All Articles
             </h2>
-            <p className="mt-3 text-charcoal-400">
+            <p className="mt-3 text-charcoal-400 dark:text-charcoal-200">
               {articles.length} guides grouped by topic
             </p>
           </ScrollReveal>
@@ -166,7 +166,7 @@ export default function HomePage() {
                       <h3 className="font-heading text-lg font-bold text-charcoal-900 dark:text-white">
                         {cat.name}
                       </h3>
-                      <p className="text-xs text-charcoal-400">{catArticles.length} article{catArticles.length > 1 ? "s" : ""}</p>
+                      <p className="text-xs text-charcoal-400 dark:text-charcoal-300">{catArticles.length} article{catArticles.length > 1 ? "s" : ""}</p>
                     </div>
                   </div>
 
@@ -178,16 +178,16 @@ export default function HomePage() {
                         <Link
                           key={article.slug}
                           href={`/article/${article.slug}`}
-                          className="group flex items-center gap-3 rounded-lg border border-charcoal-200/50 bg-white/40 px-4 py-3 backdrop-blur-sm transition-all hover:border-fire-500/40 hover:bg-white/70 hover:shadow-sm dark:border-charcoal-700/40 dark:bg-charcoal-800/30 dark:hover:border-fire-500/30 dark:hover:bg-charcoal-800/60"
+                          className="group flex items-center gap-3 rounded-lg border border-charcoal-200/50 bg-white/40 px-4 py-3 backdrop-blur-sm transition-all hover:border-fire-500/40 hover:bg-white/70 hover:shadow-sm dark:border-charcoal-500/40 dark:bg-charcoal-700/50 dark:hover:border-fire-500/30 dark:hover:bg-charcoal-800/60"
                         >
-                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-charcoal-100/80 text-charcoal-400 transition-colors group-hover:bg-fire-500/10 group-hover:text-fire-500 dark:bg-charcoal-700/60 dark:text-charcoal-500 dark:group-hover:bg-fire-500/15 dark:group-hover:text-fire-400">
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-charcoal-100/80 text-charcoal-400 transition-colors group-hover:bg-fire-500/10 group-hover:text-fire-500 dark:bg-charcoal-700/60 dark:text-charcoal-300 dark:group-hover:bg-fire-500/15 dark:group-hover:text-fire-400">
                             <ArticleIcon className="h-4 w-4" />
                           </div>
                           <div className="min-w-0 flex-1">
                             <h4 className="text-sm font-semibold text-charcoal-800 transition-colors group-hover:text-fire-500 dark:text-charcoal-100 dark:group-hover:text-fire-400">
                               {article.title}
                             </h4>
-                            <p className="mt-0.5 text-xs text-charcoal-400 dark:text-charcoal-500">
+                            <p className="mt-0.5 text-xs text-charcoal-400 dark:text-charcoal-300">
                               {article.readingTime} min read · {article.excerpt.slice(0, 60)}…
                             </p>
                           </div>

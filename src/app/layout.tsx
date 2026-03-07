@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { BackgroundAnimation } from "@/components/BackgroundAnimation";
 import { SplashLoader } from "@/components/SplashLoader";
+import { ReadingProgress } from "@/components/ReadingProgress";
 
 import "./globals.css";
 
@@ -39,9 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen bg-white/80 font-body text-charcoal-900 antialiased dark:bg-charcoal-900/80 dark:text-charcoal-100">
+      <body className="min-h-screen bg-white/80 font-body text-charcoal-900 antialiased dark:bg-charcoal-900/80 dark:text-charcoal-100" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange={false}>
           <SplashLoader />
+          <ReadingProgress />
           <BackgroundAnimation />
           <Navbar />
           <main className="relative z-10 pt-14">{children}</main>

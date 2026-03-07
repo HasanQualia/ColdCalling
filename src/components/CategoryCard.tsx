@@ -27,7 +27,7 @@ export function CategoryCard({ category, index }: CategoryCardProps) {
     >
       <Link
         href={`/category/${category.slug}`}
-        className="group relative block overflow-hidden rounded-2xl border border-charcoal-200/60 bg-white/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-fire-500/50 hover:bg-white/70 hover:shadow-lg hover:shadow-fire-500/10 dark:border-charcoal-700/50 dark:bg-charcoal-800/40 dark:hover:bg-charcoal-800/60"
+        className="group relative block overflow-hidden rounded-2xl border border-charcoal-200/60 bg-white/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-fire-500/50 hover:bg-white/70 hover:shadow-lg hover:shadow-fire-500/10 dark:border-charcoal-500/40 dark:bg-charcoal-700/60 dark:hover:bg-charcoal-800/60"
       >
         {/* Gradient overlay */}
         <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`} />
@@ -43,7 +43,7 @@ export function CategoryCard({ category, index }: CategoryCardProps) {
           <h3 className="mt-3 font-heading text-xl font-bold text-charcoal-900 transition-colors group-hover:text-fire-500 dark:text-white dark:group-hover:text-fire-400">
             {category.name}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-charcoal-400">
+          <p className="mt-2 text-sm leading-relaxed text-charcoal-400 dark:text-charcoal-200">
             {category.description}
           </p>
           <div className="mt-4 flex items-center justify-between">
@@ -51,7 +51,7 @@ export function CategoryCard({ category, index }: CategoryCardProps) {
               {articleCount} {articleCount === 1 ? "article" : "articles"}
             </span>
             <svg
-              className="h-4 w-4 text-charcoal-400 transition-all group-hover:translate-x-1 group-hover:text-fire-400 dark:text-charcoal-500"
+              className="h-4 w-4 text-charcoal-400 transition-all group-hover:translate-x-1 group-hover:text-fire-400 dark:text-charcoal-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

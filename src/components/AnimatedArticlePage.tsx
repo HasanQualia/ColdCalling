@@ -40,7 +40,7 @@ export function AnimatedArticlePage({
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
-        className="mb-8 flex items-center gap-2 text-sm text-charcoal-400 dark:text-charcoal-500"
+        className="mb-8 flex items-center gap-2 text-sm text-charcoal-400 dark:text-charcoal-300"
       >
         <Link href="/" className="transition-colors hover:text-fire-400">
           Home
@@ -104,7 +104,7 @@ export function AnimatedArticlePage({
 
       {/* Content — slide up */}
       <ScrollReveal effect="slide" direction="up" duration={0.7}>
-        <div className="rounded-2xl border border-charcoal-200/60 bg-white/50 p-6 backdrop-blur-sm dark:border-charcoal-700/50 dark:bg-charcoal-800/40 sm:p-8 lg:p-10">
+        <div className="rounded-2xl border border-charcoal-200/60 bg-white/50 p-6 backdrop-blur-sm dark:border-charcoal-500/40 dark:bg-charcoal-700/60 sm:p-8 lg:p-10">
           {content}
         </div>
       </ScrollReveal>
@@ -124,7 +124,7 @@ export function AnimatedArticlePage({
               <StaggerItem key={rel.slug} effect="flip">
                 <Link
                   href={`/article/${rel.slug}`}
-                  className="group block rounded-xl border border-charcoal-200/60 bg-white/50 p-4 backdrop-blur-sm transition-all hover:border-fire-500/40 hover:bg-white/70 dark:border-charcoal-700/50 dark:bg-charcoal-800/40 dark:hover:bg-charcoal-800/60"
+                  className="group block rounded-xl border border-charcoal-200/60 bg-white/50 p-4 backdrop-blur-sm transition-all hover:border-fire-500/40 hover:bg-white/70 dark:border-charcoal-500/40 dark:bg-charcoal-700/60 dark:hover:bg-charcoal-800/60"
                 >
                   <div className="flex h-8 w-8 items-center justify-center rounded-md bg-charcoal-100 text-charcoal-500 transition-colors group-hover:bg-fire-500/10 group-hover:text-fire-500 dark:bg-charcoal-700 dark:text-charcoal-400 dark:group-hover:text-fire-400">
                     <RelIcon className="h-4 w-4" />
@@ -132,7 +132,7 @@ export function AnimatedArticlePage({
                   <h3 className="mt-2 font-heading text-sm font-semibold text-charcoal-900 transition-colors group-hover:text-fire-500 dark:text-white dark:group-hover:text-fire-400">
                     {rel.title}
                   </h3>
-                  <p className="mt-1 text-xs text-charcoal-400 dark:text-charcoal-500">
+                  <p className="mt-1 text-xs text-charcoal-400 dark:text-charcoal-300">
                     {rel.readingTime} min read
                   </p>
                 </Link>
@@ -145,7 +145,7 @@ export function AnimatedArticlePage({
 
       {/* CTA — scale in */}
       <ScrollReveal effect="scale" delay={0.1}>
-        <div className="mt-16 rounded-2xl border border-charcoal-200/60 bg-gradient-to-r from-fire-50/50 to-white/50 p-8 text-center backdrop-blur-sm dark:border-charcoal-700/50 dark:from-fire-900/20 dark:to-charcoal-800/40">
+        <div className="mt-16 rounded-2xl border border-charcoal-200/60 bg-gradient-to-r from-fire-50/50 to-white/50 p-8 text-center backdrop-blur-sm dark:border-charcoal-500/40 dark:from-fire-900/20 dark:to-charcoal-800/40">
           <h3 className="font-heading text-xl font-bold text-charcoal-900 dark:text-white">
             Want to level up your cold calling?
           </h3>
