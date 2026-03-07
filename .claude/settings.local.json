@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__firecrawl__firecrawl_crawl",
+      "Bash(\"C:/Users/hasan/Projects/Websites/ColdCalling/.planning/REQUIREMENTS_traceability.tmp\":*)",
+      "WebSearch",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(rm:*)",
+      "Bash(npx serve:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "firecrawl"
+  ]
+}
