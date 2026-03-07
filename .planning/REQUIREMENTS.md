@@ -70,37 +70,44 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CONT-01 | — | Pending |
-| CONT-02 | — | Pending |
-| CONT-03 | — | Pending |
-| CONT-04 | — | Pending |
-| CONT-05 | — | Pending |
-| NAV-01 | — | Pending |
-| NAV-02 | — | Pending |
-| NAV-03 | — | Pending |
-| NAV-04 | — | Pending |
-| NAV-05 | — | Pending |
-| SRCH-01 | — | Pending |
-| SRCH-02 | — | Pending |
-| SRCH-03 | — | Pending |
-| DESGN-01 | — | Pending |
-| DESGN-02 | — | Pending |
-| DESGN-03 | — | Pending |
-| DESGN-04 | — | Pending |
-| DESGN-05 | — | Pending |
-| DESGN-06 | — | Pending |
-| DESGN-07 | — | Pending |
-| SEO-01 | — | Pending |
-| SEO-02 | — | Pending |
-| SEO-03 | — | Pending |
-| SEO-04 | — | Pending |
-| SEO-05 | — | Pending |
+| CONT-01 | Phase 1 | Pending |
+| CONT-02 | Phase 1 | Pending |
+| CONT-03 | Phase 3 | Pending |
+| CONT-04 | Phase 3 | Pending |
+| CONT-05 | Phase 3 | Pending |
+| NAV-01 | Phase 2 | Pending |
+| NAV-02 | Phase 2 | Pending |
+| NAV-03 | Phase 2 | Pending |
+| NAV-04 | Phase 3 | Pending |
+| NAV-05 | Phase 2 | Pending |
+| SRCH-01 | Phase 3 | Pending |
+| SRCH-02 | Phase 3 | Pending |
+| SRCH-03 | Phase 3 | Pending |
+| DESGN-01 | Phase 4 | Pending |
+| DESGN-02 | Phase 4 | Pending |
+| DESGN-03 | Phase 4 | Pending |
+| DESGN-04 | Phase 4 | Pending |
+| DESGN-05 | Phase 4 | Pending |
+| DESGN-06 | Phase 4 | Pending |
+| DESGN-07 | Phase 4 | Pending |
+| SEO-01 | Phase 5 | Pending |
+| SEO-02 | Phase 5 | Pending |
+| SEO-03 | Phase 5 | Pending |
+| SEO-04 | Phase 5 | Pending |
+| SEO-05 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 25 total
-- Mapped to phases: 0
-- Unmapped: 25 (pending roadmap creation)
+- Mapped to phases: 25
+- Unmapped: 0
+
+**Phase Distribution:**
+- Phase 1 (Content Foundation): 2 requirements
+- Phase 2 (Navigation & Discovery): 4 requirements
+- Phase 3 (Search & Content Enhancement): 7 requirements
+- Phase 4 (Design System & Polish): 7 requirements
+- Phase 5 (SEO & Optimization): 5 requirements
 
 ---
 *Requirements defined: 2026-03-07*
-*Last updated: 2026-03-07 after initial definition*
+*Last updated: 2026-03-07 after roadmap creation*
