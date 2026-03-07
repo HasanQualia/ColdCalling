@@ -19,3 +19,4 @@ out/
 .DS_Store
 *.tgz
 tsconfig.tsbuildinfo
+.env*.local
