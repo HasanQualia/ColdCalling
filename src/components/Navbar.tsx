@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { SearchModal } from "./SearchModal";
 import { ThemeToggle } from "./ThemeToggle";
-import { IconPhone } from "./Icons";
+
 
 export function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -39,9 +39,11 @@ export function Navbar() {
         >
           <div className="navbar-inner flex items-center justify-between">
             <Link href="/" className="group flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-fire-500/10 text-fire-500 transition-colors duration-300 group-hover:bg-fire-500/20">
-                <IconPhone className="h-4 w-4" />
-              </div>
+              <img
+                src="https://cdn.prod.website-files.com/690b1090d92ceadd368ab122/690b29fd719b235787ea75f8_DIV%20(2).svg"
+                alt="Cold Calling Wiki"
+                className="h-8 w-8 rounded-lg transition-transform duration-300 group-hover:scale-110"
+              />
               <span className="font-heading text-base font-bold text-charcoal-900 transition-colors duration-300 group-hover:text-fire-500 dark:text-white dark:group-hover:text-volt sm:text-lg">
                 Cold Calling Wiki
               </span>
