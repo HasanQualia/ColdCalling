@@ -33,7 +33,7 @@ export function AnimatedCategoryPage({
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
-        className="mb-8 flex items-center gap-2 text-sm text-charcoal-400 dark:text-charcoal-500"
+        className="mb-8 flex items-center gap-2 text-sm text-charcoal-400 dark:text-charcoal-300"
       >
         <Link href="/" className="transition-colors hover:text-fire-400">
           Home
@@ -72,7 +72,7 @@ export function AnimatedCategoryPage({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.3 }}
-          className="mt-2 text-sm text-charcoal-400 dark:text-charcoal-500"
+          className="mt-2 text-sm text-charcoal-400 dark:text-charcoal-300"
         >
           {articles.length} {articles.length === 1 ? "article" : "articles"}
         </motion.p>
@@ -86,7 +86,7 @@ export function AnimatedCategoryPage({
           <StaggerItem key={article.slug} effect="slide-left">
             <Link
               href={`/article/${article.slug}`}
-              className="group flex items-start gap-4 rounded-xl border border-charcoal-200/60 bg-white/50 p-5 backdrop-blur-sm transition-all hover:border-fire-500/40 hover:bg-white/70 dark:border-charcoal-700/50 dark:bg-charcoal-800/40 dark:hover:bg-charcoal-800/60"
+              className="group flex items-start gap-4 rounded-xl border border-charcoal-200/60 bg-white/50 p-5 backdrop-blur-sm transition-all hover:border-fire-500/40 hover:bg-white/70 dark:border-charcoal-500/40 dark:bg-charcoal-700/60 dark:hover:bg-charcoal-800/60"
             >
               <motion.div
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-charcoal-100 text-charcoal-500 transition-colors group-hover:bg-fire-500/10 group-hover:text-fire-500 dark:bg-charcoal-700 dark:text-charcoal-400 dark:group-hover:text-fire-400"
@@ -102,7 +102,7 @@ export function AnimatedCategoryPage({
                 <p className="mt-1 text-sm text-charcoal-400 line-clamp-2">
                   {article.excerpt}
                 </p>
-                <span className="mt-2 inline-block text-xs text-charcoal-400 dark:text-charcoal-500">
+                <span className="mt-2 inline-block text-xs text-charcoal-400 dark:text-charcoal-300">
                   {article.readingTime} min read
                 </span>
               </div>
@@ -121,7 +121,7 @@ export function AnimatedCategoryPage({
       </StaggerContainer>
 
       {articles.length === 0 && (
-        <div className="rounded-xl border border-charcoal-200/60 bg-white/50 p-12 text-center backdrop-blur-sm dark:border-charcoal-700/50 dark:bg-charcoal-800/40">
+        <div className="rounded-xl border border-charcoal-200/60 bg-white/50 p-12 text-center backdrop-blur-sm dark:border-charcoal-500/40 dark:bg-charcoal-700/60">
           <p className="text-charcoal-400">No articles in this category yet.</p>
           <Link
             href="/"

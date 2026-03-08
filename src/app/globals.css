@@ -3,30 +3,30 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-fire-50: #fff7ed;
-  --color-fire-100: #ffedd5;
-  --color-fire-200: #fed7aa;
-  --color-fire-300: #fdba74;
-  --color-fire-400: #fb923c;
-  --color-fire-500: #f97316;
-  --color-fire-600: #ea580c;
-  --color-fire-700: #c2410c;
-  --color-fire-800: #9a3412;
-  --color-fire-900: #7c2d12;
+  --color-fire-50: #fdf8e8;
+  --color-fire-100: #faefc6;
+  --color-fire-200: #f5e09a;
+  --color-fire-300: #f0d06e;
+  --color-fire-400: #ebc145;
+  --color-fire-500: #e7b221;
+  --color-fire-600: #c9991a;
+  --color-fire-700: #a07a15;
+  --color-fire-800: #785c10;
+  --color-fire-900: #503d0b;
 
-  --color-charcoal-50: #f8f8f8;
-  --color-charcoal-100: #e8e8e8;
-  --color-charcoal-200: #d4d4d4;
-  --color-charcoal-300: #a3a3a3;
-  --color-charcoal-400: #737373;
-  --color-charcoal-500: #525252;
-  --color-charcoal-600: #404040;
-  --color-charcoal-700: #2d2d2d;
-  --color-charcoal-800: #1a1a1a;
-  --color-charcoal-900: #0d0d0d;
+  --color-charcoal-50: #f4f5f7;
+  --color-charcoal-100: #e0e3ea;
+  --color-charcoal-200: #c1c5d3;
+  --color-charcoal-300: #9ba1b3;
+  --color-charcoal-400: #7a8296;
+  --color-charcoal-500: #5d6580;
+  --color-charcoal-600: #3d4a6e;
+  --color-charcoal-700: #2a3760;
+  --color-charcoal-800: #0f2152;
+  --color-charcoal-900: #021945;
 
-  --color-volt: #c8ff00;
-  --color-volt-dark: #a3cc00;
+  --color-volt: #e7b221;
+  --color-volt-dark: #c9991a;
 
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "DM Sans", sans-serif;
@@ -229,15 +229,71 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-charcoal-200);
 }
 
+/* Navbar morph animation */
+.navbar-morph {
+  --_duration: 1s;
+  --_ease: cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 1px solid;
+  border-color: rgba(212, 212, 212, 0.5);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: none;
+  transition:
+    max-width var(--_duration) var(--_ease),
+    margin var(--_duration) var(--_ease),
+    padding var(--_duration) var(--_ease),
+    border-radius var(--_duration) var(--_ease),
+    border-color var(--_duration) var(--_ease),
+    background var(--_duration) var(--_ease),
+    box-shadow var(--_duration) var(--_ease);
+}
+
+.navbar-morph[data-scrolled="true"] {
+  max-width: 720px;
+  margin: 12px auto 0;
+  border-radius: 16px;
+  border: 1px solid rgba(212, 212, 212, 0.3);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+:where(.dark) .navbar-morph {
+  border-color: rgba(42, 55, 96, 0.5);
+  background: rgba(2, 25, 69, 0.7);
+}
+
+:where(.dark) .navbar-morph[data-scrolled="true"] {
+  border-color: rgba(231, 178, 33, 0.15);
+  background: rgba(2, 25, 69, 0.92);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 16px rgba(231, 178, 33, 0.04);
+}
+
+.navbar-inner {
+  padding: 12px 24px;
+  max-width: 72rem;
+  margin: 0 auto;
+  transition: padding var(--_duration) var(--_ease);
+}
+
+.navbar-morph[data-scrolled="true"] .navbar-inner {
+  padding: 10px 20px;
+  max-width: 100%;
+}
+
 /* Reading progress bar */
 .reading-progress {
   position: fixed;
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-fire-500), var(--color-volt));
+  background: linear-gradient(90deg, var(--color-fire-700), var(--color-fire-500), var(--color-fire-300));
   z-index: 100;
-  transition: width 0.1s linear;
+  transition: width 0.35s cubic-bezier(0.25, 0.4, 0.25, 1);
+  box-shadow: 0 0 10px var(--color-fire-500), 0 0 20px rgba(231, 178, 33, 0.3);
+  border-radius: 0 2px 2px 0;
 }
 
 /* Custom scrollbar — light */

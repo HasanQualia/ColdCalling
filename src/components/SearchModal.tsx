@@ -86,7 +86,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                   <p className="font-heading font-semibold text-charcoal-900 dark:text-white">{article.title}</p>
                   <p className="mt-0.5 truncate text-sm text-charcoal-400">{article.excerpt}</p>
                 </div>
-                <span className="mt-0.5 text-xs text-charcoal-400 dark:text-charcoal-500">{article.readingTime} min</span>
+                <span className="mt-0.5 text-xs text-charcoal-400 dark:text-charcoal-300">{article.readingTime} min</span>
               </Link>
               );
             })}
@@ -100,7 +100,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
         )}
 
         {query.length <= 1 && (
-          <div className="p-6 text-center text-sm text-charcoal-400 dark:text-charcoal-500">
+          <div className="p-6 text-center text-sm text-charcoal-400 dark:text-charcoal-300">
             Start typing to search across all articles
           </div>
         )}

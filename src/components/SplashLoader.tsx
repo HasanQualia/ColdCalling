@@ -27,7 +27,7 @@ export function SplashLoader() {
           exit={{ opacity: 0, y: -40, scale: 1.05 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center"
-          style={{ background: "#0d0d0d" }}
+          style={{ background: "#021945" }}
         >
           {/* Pulse rings */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -38,7 +38,7 @@ export function SplashLoader() {
                 style={{
                   width: 120,
                   height: 120,
-                  border: "2px solid rgba(249, 115, 22, 0.4)",
+                  border: "2px solid rgba(231, 178, 33, 0.4)",
                   animationDelay: `${0.3 + i * 0.45}s`,
                 }}
               />
@@ -57,7 +57,7 @@ export function SplashLoader() {
               height="72"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#f97316"
+              stroke="#e7b221"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"

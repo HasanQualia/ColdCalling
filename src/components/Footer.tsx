@@ -99,7 +99,7 @@ export function Footer() {
           </StaggerItem>
         </StaggerContainer>
 
-        <div className="mt-10 border-t border-charcoal-200 pt-6 text-center text-xs text-charcoal-400 dark:border-charcoal-800 dark:text-charcoal-500">
+        <div className="mt-10 border-t border-charcoal-200 pt-6 text-center text-xs text-charcoal-400 dark:border-charcoal-800 dark:text-charcoal-300">
           Cold Calling Wiki — Built by{" "}
           <a
             href="https://www.underdogsales.com"

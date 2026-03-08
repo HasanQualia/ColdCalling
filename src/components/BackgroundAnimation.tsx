@@ -67,7 +67,7 @@ export function BackgroundAnimation() {
     // Bigger, more visible orbs
     const createOrbs = (count: number): Orb[] => {
       const arr: Orb[] = [];
-      const hues = [24, 30, 75, 15]; // fire-orange, amber, volt-green, warm-red
+      const hues = [42, 45, 38, 48]; // gold tones for both modes
       for (let i = 0; i < count; i++) {
         arr.push({
           x: Math.random() * canvas.width,
@@ -84,8 +84,8 @@ export function BackgroundAnimation() {
       return arr;
     };
 
-    const particles = createParticles(30);
-    const orbs = createOrbs(4);
+    const particles = createParticles(60);
+    const orbs = createOrbs(7);
 
     const draw = () => {
       time += 1;
@@ -147,13 +147,13 @@ export function BackgroundAnimation() {
         // Glow effect
         const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 3);
         if (dark) {
-          glow.addColorStop(0, `rgba(249, 115, 22, ${p.opacity})`);
-          glow.addColorStop(0.5, `rgba(249, 115, 22, ${p.opacity * 0.3})`);
-          glow.addColorStop(1, `rgba(249, 115, 22, 0)`);
+          glow.addColorStop(0, `rgba(231, 178, 33, ${p.opacity})`);
+          glow.addColorStop(0.5, `rgba(231, 178, 33, ${p.opacity * 0.3})`);
+          glow.addColorStop(1, `rgba(231, 178, 33, 0)`);
         } else {
-          glow.addColorStop(0, `rgba(234, 88, 12, ${p.opacity * 0.8})`);
-          glow.addColorStop(0.5, `rgba(234, 88, 12, ${p.opacity * 0.2})`);
-          glow.addColorStop(1, `rgba(234, 88, 12, 0)`);
+          glow.addColorStop(0, `rgba(231, 178, 33, ${p.opacity * 0.8})`);
+          glow.addColorStop(0.5, `rgba(231, 178, 33, ${p.opacity * 0.2})`);
+          glow.addColorStop(1, `rgba(231, 178, 33, 0)`);
         }
 
         ctx.beginPath();
@@ -165,8 +165,8 @@ export function BackgroundAnimation() {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = dark
-          ? `rgba(249, 115, 22, ${p.opacity})`
-          : `rgba(234, 88, 12, ${p.opacity * 0.9})`;
+          ? `rgba(231, 178, 33, ${p.opacity})`
+          : `rgba(231, 178, 33, ${p.opacity * 0.9})`;
         ctx.fill();
       }
 
@@ -183,8 +183,8 @@ export function BackgroundAnimation() {
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.strokeStyle = dark
-              ? `rgba(200, 255, 0, ${alpha})`
-              : `rgba(249, 115, 22, ${alpha * 0.6})`;
+              ? `rgba(231, 178, 33, ${alpha})`
+              : `rgba(231, 178, 33, ${alpha * 0.6})`;
             ctx.lineWidth = dark ? 0.8 : 0.6;
             ctx.stroke();
           }
