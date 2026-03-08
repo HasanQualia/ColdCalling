@@ -25,10 +25,6 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
-      if (e.key === "/" && !open) {
-        e.preventDefault();
-        // parent handles opening
-      }
       if (e.key === "Escape" && open) {
         onClose();
       }
@@ -50,11 +46,11 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
 
   return (
     <div className="fixed inset-0 z-[60] flex items-start justify-center pt-[15vh]">
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm dark:bg-black/70" onClick={onClose} />
+      <div className="fixed inset-0 bg-navy-950/20 backdrop-blur-sm" onClick={onClose} />
 
-      <div className="relative z-10 w-full max-w-xl rounded-xl border border-charcoal-200 bg-white shadow-2xl dark:border-charcoal-700 dark:bg-charcoal-800">
-        <div className="flex items-center gap-3 border-b border-charcoal-200 p-4 dark:border-charcoal-700">
-          <svg className="h-5 w-5 text-charcoal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="relative z-10 w-full max-w-xl rounded-xl border border-navy-100 bg-white shadow-2xl">
+        <div className="flex items-center gap-3 border-b border-navy-100 p-4">
+          <svg className="h-5 w-5 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <input
@@ -63,9 +59,9 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             value={query}
             onChange={(e) => handleSearch(e.target.value)}
             placeholder="Search articles..."
-            className="flex-1 bg-transparent text-lg text-charcoal-900 placeholder-charcoal-400 outline-none dark:text-white dark:placeholder-charcoal-500"
+            className="flex-1 bg-transparent text-lg text-navy-900 placeholder-navy-300 outline-none"
           />
-          <kbd className="rounded bg-charcoal-100 px-2 py-0.5 text-xs text-charcoal-500 dark:bg-charcoal-700 dark:text-charcoal-400">ESC</kbd>
+          <kbd className="rounded bg-navy-50 px-2 py-0.5 text-xs text-navy-400">ESC</kbd>
         </div>
 
         {results.length > 0 && (
@@ -73,34 +69,34 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             {results.map((article) => {
               const ArticleIcon = getArticleIcon(article.slug);
               return (
-              <Link
-                key={article.slug}
-                href={`/article/${article.slug}`}
-                onClick={onClose}
-                className="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-charcoal-50 dark:hover:bg-charcoal-700"
-              >
-                <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-charcoal-100 text-charcoal-500 dark:bg-charcoal-700 dark:text-charcoal-400">
-                  <ArticleIcon className="h-3.5 w-3.5" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="font-heading font-semibold text-charcoal-900 dark:text-white">{article.title}</p>
-                  <p className="mt-0.5 truncate text-sm text-charcoal-400">{article.excerpt}</p>
-                </div>
-                <span className="mt-0.5 text-xs text-charcoal-400 dark:text-charcoal-300">{article.readingTime} min</span>
-              </Link>
+                <Link
+                  key={article.slug}
+                  href={`/article/${article.slug}`}
+                  onClick={onClose}
+                  className="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-navy-50"
+                >
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-navy-50 text-navy-500">
+                    <ArticleIcon className="h-3.5 w-3.5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-heading font-semibold text-navy-900">{article.title}</p>
+                    <p className="mt-0.5 truncate text-sm text-navy-400">{article.excerpt}</p>
+                  </div>
+                  <span className="mt-0.5 text-xs text-navy-400">{article.readingTime} min</span>
+                </Link>
               );
             })}
           </div>
         )}
 
         {query.length > 1 && results.length === 0 && (
-          <div className="p-8 text-center text-charcoal-400">
+          <div className="p-8 text-center text-navy-400">
             No articles found for &ldquo;{query}&rdquo;
           </div>
         )}
 
         {query.length <= 1 && (
-          <div className="p-6 text-center text-sm text-charcoal-400 dark:text-charcoal-300">
+          <div className="p-6 text-center text-sm text-navy-400">
             Start typing to search across all articles
           </div>
         )}

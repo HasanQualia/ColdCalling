@@ -6,7 +6,11 @@
       "WebSearch",
       "Bash(npx create-next-app@latest:*)",
       "Bash(rm:*)",
-      "Bash(npx serve:*)"
+      "Bash(npx serve:*)",
+      "Bash(pip install:*)",
+      "Bash(npx vercel:*)",
+      "WebFetch(domain:coldcalling-rosy.vercel.app)",
+      "WebFetch(domain:coldcalling-nu.vercel.app)"
     ]
   },
   "enableAllProjectMcpServers": true,

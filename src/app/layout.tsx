@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, DM_Sans } from "next/font/google";
-import { ThemeProvider } from "next-themes";
+import { DM_Sans } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { BackgroundAnimation } from "@/components/BackgroundAnimation";
-import { SplashLoader } from "@/components/SplashLoader";
 import { ReadingProgress } from "@/components/ReadingProgress";
-import { TitleMarquee } from "@/components/TitleMarquee";
 
 import "./globals.css";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-});
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -43,17 +33,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen bg-white/80 font-body text-charcoal-900 antialiased dark:bg-charcoal-900/80 dark:text-charcoal-100" suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange={false}>
-          <TitleMarquee />
-          <SplashLoader />
-          <ReadingProgress />
-          <BackgroundAnimation />
-          <Navbar />
-          <main className="relative z-10 pt-14">{children}</main>
-          <Footer />
-        </ThemeProvider>
+    <html lang="en" className={dmSans.variable}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-screen bg-white font-body text-navy-950 antialiased">
+        <ReadingProgress />
+        <Navbar />
+        <main className="pt-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );

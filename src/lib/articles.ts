@@ -1129,3 +1129,23 @@ export function getRelatedArticles(slug: string, count = 3): Article[] {
   );
   return [...sameCategory, ...others].slice(0, count);
 }
+
+/** Flat ordered list of all articles, grouped by category order */
+export function getOrderedArticles(): Article[] {
+  const ordered: Article[] = [];
+  for (const cat of categories) {
+    ordered.push(...articles.filter((a) => a.category === cat.slug));
+  }
+  return ordered;
+}
+
+/** Get previous and next articles relative to current slug */
+export function getPrevNext(slug: string): { prev: Article | null; next: Article | null } {
+  const ordered = getOrderedArticles();
+  const idx = ordered.findIndex((a) => a.slug === slug);
+  if (idx === -1) return { prev: null, next: null };
+  return {
+    prev: idx > 0 ? ordered[idx - 1] : null,
+    next: idx < ordered.length - 1 ? ordered[idx + 1] : null,
+  };
+}
